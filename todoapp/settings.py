@@ -92,3 +92,4 @@ def get_cache():
 
 
 CACHES = get_cache()
+USE_TZ = True
