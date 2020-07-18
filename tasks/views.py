@@ -41,7 +41,7 @@ def index(request):
     except:
         low_count=0
     #здесь мы делаем словарь имя категории - количество задач
-    @functools.lru_cache
+    @functools.lru_cache(maxsize=128, typed=False)
     def create_dic(counts):
         counts = {c.name: c.total_tasks for c in counts}
         return counts
